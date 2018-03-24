@@ -28,7 +28,7 @@ const byte MyPort = 3;
 byte Payload[51];
 byte CNT = 0;                                               // Counter for the main loop, to track packets while prototyping
 #define freqPlan TTN_FP_EU868                               // Replace with TTN_FP_EU868 or TTN_FP_US915
-#define FSB 1                                               // Comcast is using FSB 1
+#define FSB 1                                               // FSB 1
 #define SF 7                                                // Initial SF
 
 TheThingsNetwork  ExpLoRer (loraSerial, debugSerial, freqPlan, SF, FSB);    // Create an instance from TheThingsNetwork class
@@ -84,7 +84,7 @@ void setup()
 
   //Hard-coded GPS position, just to create a map display on Cayenne
   CayenneRecord.reset();
-  CayenneRecord.addGPS(1, 39.9582684, -75.1731696, 10);  //Franklin Institute, Philadelphia
+  CayenneRecord.addGPS(1, 51.4141391, -0.9412872, 10);  // Thames Valley Science Park, Shinfield, UK
                   
   // Copy out the formatted record
   byte PayloadSize = CayenneRecord.copy(Payload);
