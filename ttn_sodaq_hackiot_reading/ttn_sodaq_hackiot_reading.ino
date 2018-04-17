@@ -13,7 +13,7 @@ byte BUTTON_STATE;                                                  // Tracks th
 
 // For OTAA. Set your AppEUI and AppKey. DevEUI will be serialized by using  HwEUI (in the RN module)
 const char *appEui = "";
-const char *appKey = "";    
+const char *appKey = "";
 
 /*
 // For ABP. Set your devAddr & Keys
@@ -27,7 +27,7 @@ const bool UNCNF = false;
 const byte MyPort = 3;
 byte Payload[51];
 byte CNT = 0;                                               // Counter for the main loop, to track packets while prototyping
-#define freqPlan TTN_FP_US915                               // Replace with TTN_FP_EU868 or TTN_FP_US915
+#define freqPlan TTN_FP_EU868                               // Replace with TTN_FP_EU868 or TTN_FP_US915
 #define FSB 0                                               // FSB 0 = enable all channels, 1-8 for private networks
 #define SF 7                                                // Initial SF
 
@@ -94,8 +94,6 @@ void setup()
 }                                                       // End of the setup() function
 
 
-
-
 void loop()
 {
   CNT++;
@@ -144,7 +142,6 @@ void loop()
         }
     }
 }                                                       // End of loop() function
-
 
 
 // Helper functions below here                                                
